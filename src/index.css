@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.ascii-preview {
+    font-family: 'Courier New', Courier, monospace, 'Consolas', 'Lucida Console', monospace;
+    line-height: 1.05;
+    /* un poco más apretado que 1.0 para que quepa más */
+    letter-spacing: 0.02em;
+    /* sutil para mejorar legibilidad */
+    white-space: pre;
+    tab-size: 2;
+}
+
+/* Opcional: si quieres que el texto sea más grande en pantallas grandes */
+@media (min-width: 1024px) {
+    .ascii-preview {
+        font-size: 1.05rem;
+    }
+}
